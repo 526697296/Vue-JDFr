@@ -20,6 +20,12 @@
           </router-link>
       </div>
       </section>
+      <!-- 帮助中心，在线客服 -->
+      <div :class="$style.homehelp" v-for="help in helps" :key="help.img">
+          <router-lnik :to="{name : help.href}">
+              <img :src="help.img">
+          </router-lnik>
+      </div>
   </section>
 </template>
 <script>
@@ -31,6 +37,10 @@ export default{
     },
     data(){
         return{
+            helps:[{
+                href:"home",
+                img:"//img12.360buyimg.com/jrpmobile/jfs/t2842/350/3035567089/14791/5f6ff93d/577cf395N31e76288.png?width=1125&height=252"
+            }],
             yqycs:[
                 {
                     href:"home",
@@ -121,6 +131,14 @@ export default{
     }
     a{
         text-decoration: none;
+    }
+}
+.homehelp{
+    margin-top:0.2rem;
+    width:100%;
+    img{
+        width:6.4rem /* 640/100 */;
+        height:1.44rem /* 144/100 */;
     }
 }
 </style>
