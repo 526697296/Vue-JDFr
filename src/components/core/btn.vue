@@ -7,7 +7,7 @@
 <script>
 export default {
   props:{
-    //   传入一个类名，
+    //   定义传入类名的规则，
       cname:{
           type:String,
           default:"",

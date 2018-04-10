@@ -29,6 +29,10 @@ export default {
         swiperSlide
     },
     props:{
+        cname:{
+            type:String,
+            default:"",
+        },
         options:{
             // 类型是一个对象的形式,参数在default里面编写
             type:Object, 
@@ -48,6 +52,7 @@ export default {
             items:{
                 type:Array,
                 default(){
+                    // []里面也可以自己添加数据,这样可以直接在这里展示效果
                     return []
                 }
             }
@@ -56,6 +61,10 @@ export default {
 </script>
 <style lang="css">
 /* 引入vue-awesome-swiper样式 */
-@import "~swiper/dist/css/swiper.css";
-
+/* @import "swiper/dist/css/swiper.css"; */
+/* 这里定义的是图片的大小,我自己临时定义的,不然没法转换rem,一个弊端,哎 */
+img{
+    width:6.4rem /* 640/100 */;
+    height:2.73rem /* 273/100 */;
+}
 </style>
