@@ -63,8 +63,5 @@ export default {
 /* 引入vue-awesome-swiper样式 */
 /* @import "swiper/dist/css/swiper.css"; */
 /* 这里定义的是图片的大小,我自己临时定义的,不然没法转换rem,一个弊端,哎 */
-img{
-    width:6.4rem /* 640/100 */;
-    height:2.73rem /* 273/100 */;
-}
+
 </style>
