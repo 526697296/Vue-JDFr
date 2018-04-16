@@ -3,7 +3,12 @@
   <Panel title="众筹新品" :class="$style.panel">
       <!-- 设定一个容器 -->
       <section :class="$style.content">
+          <!-- 日常开发中>应该用字体图标 -->
+          <!-- 真实业务场景中应该用router-link -->
+          <div :class="$style.arrow">更多尖货 ></div>
           <!-- 调用封装得slider组件 -->
+          <!-- options属性slider自带得，在slider组件中封装好了，这里直接绑定 -->
+          <!-- 数据进去就好 -->
           <Slider :options="options" :items="items" cname="product-slider"></Slider>
       </section>
   </Panel>
@@ -51,10 +56,11 @@ export default{
 </script>
 <style lang="scss">
 .product-slider{
-    // 这个是我们设置swiper得样式，但是属性是swiper自带得
+    // 这个是我们设置swiper得样式，swiper-container是swiper官方得属性
     .swiper-container{
+        // border-box = 元素+内填充+padding
         box-sizing: border-box;
-        padding:0 .24rem /* 24/100 */;
+        padding:0 .24rem /* 24/100 */ 0 .24rem /* 24/100 */;
         .swiper-slide{
             a{
                 display: inline-block;
@@ -72,10 +78,19 @@ export default{
 </style>
 <style lang="scss" module>
 @import '../../../src/assets/css/element.scss';
+// 设置该组件得样式
 .panel{
     @include panel;
     .content{
         padding-bottom:.4rem /* 40/100 */;
+        position: relative;
+        &>div{
+            position: absolute;
+            font-size:.28rem /* 28/100 */;
+            color:#999;
+            right:.2rem /* 20/100 */;
+            top:-.7rem /* 70/100 */;
+        }
     }
 }
 

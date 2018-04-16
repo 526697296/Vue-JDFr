@@ -101,7 +101,7 @@ export default {
         }
     }
     .ullist{
-        margin-bottom:.2rem /* 20/100 */;
+        margin-bottom:1.2rem /* 120/100 */;
         font-size:.24rem /* 24/100 */;
         li{
             padding:.26rem /* 12/100 */ .32rem /* 16/100 */;

@@ -1,5 +1,6 @@
 <template>
   <Panel title="理财精选" :class="$style.panel">
+      <!-- 本组件这样写不行，数据应是动态绑定，不能这样写死，通过data返回 -->
       <section :class="$style.content">
           <div :class="$style.div1" style="border-bottom:.01rem /* 1/100 */ solid #eee;">
                 <div :class="$style.item">

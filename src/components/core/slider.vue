@@ -29,6 +29,7 @@ export default {
         swiperSlide
     },
     props:{
+        // 定义传入class类名
         cname:{
             type:String,
             default:"",
@@ -62,6 +63,5 @@ export default {
 <style lang="css">
 /* 引入vue-awesome-swiper样式 */
 /* @import "swiper/dist/css/swiper.css"; */
-/* 这里定义的是图片的大小,我自己临时定义的,不然没法转换rem,一个弊端,哎 */
 
 </style>
